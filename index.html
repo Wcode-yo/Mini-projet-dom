@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Board</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js.js" defer></script>
+  </head>
+  <body>
+    <main class="board-app">
+      <h1>Product board</h1>
+      <form id="product-form" class="add" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="off" />
+          <p id="name-error" class="error"></p>
+        </div>
+        <div class="field">
+          <label for="price">Price (€)</label>
+          <input
+            id="price"
+            name="price"
+            inputmode="decimal"
+            autocomplete="off"
+          />
+          <p id="price-error" class="error"></p>
+        </div>
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option value="">Choose…</option>
+            <option>Electronics</option>
+            <option>Books</option>
+            <option>Home</option>
+          </select>
+          <p id="category-error" class="error"></p>
+        </div>
+        <button type="submit">Add product</button>
+      </form>
+      <div class="filters">
+        <input id="search" type="search" placeholder="Search a product" />
+        <select id="filter-category">
+          <option value="all">All categories</option>
+          <option>Electronics</option>
+          <option>Books</option>
+          <option>Home</option>
+        </select>
+      </div>
+      <section class="columns">
+        <article class="column" data-status="TODO">
+          <h2>
+            TODO
+            <span id="count-TODO" class="count">0</span>
+          </h2>
+          <ul id="list-TODO" class="list"></ul>
+        </article>
+        <article class="column" data-status="DOING">
+          <h2>
+            DOING
+            <span id="count-DOING" class="count">0</span>
+          </h2>
+          <ul id="list-DOING" class="list"></ul>
+        </article>
+        <article class="column" data-status="DONE">
+          <h2>
+            DONE
+            <span id="count-DONE" class="count">0</span>
+          </h2>
+          <ul id="list-DONE" class="list"></ul>
+        </article>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
