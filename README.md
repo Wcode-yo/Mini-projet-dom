@@ -18,7 +18,7 @@ The project has no dependencies and no build step.
 .
 ├── index.html   Markup: form, filters and the three columns
 ├── style.css    Styles
-└── app.js       All application logic
+└── js.js       All application logic
 ```
 
 ## Getting started
