@@ -82,9 +82,7 @@ form.addEventListener("submit", (event) => {
   form.reset();
 });
  
- form.addEventListener("input", () => {
-   validateProduct(ReadForm());
-});
+
 let nextId = 7;
 
 function addProduct(data) {
